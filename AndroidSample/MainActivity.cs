@@ -15,7 +15,6 @@ using System.Collections.Generic;
 
 namespace AndroidSample
 {
-    //microsoft dist openjdk 8.0.25
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, IVgsCollectResponseListener, IOnClickListener,
         IOnFieldStateChangeListener
