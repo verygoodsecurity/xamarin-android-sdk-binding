@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSGCollectBindingLibrary", "VSGCollectBindingLibrary\VSGCollectBindingLibrary.csproj", "{F18C32A5-64D7-4FBF-9888-C75E7330785B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGSCollectBindingLibrary", "VGSCollectBindingLibrary\VGSCollectBindingLibrary.csproj", "{F18C32A5-64D7-4FBF-9888-C75E7330785B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidSample", "AndroidSample\AndroidSample.csproj", "{49E8279F-8C1E-45B9-9E60-593F1E2C27AF}"
 EndProject

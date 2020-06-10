@@ -4,11 +4,11 @@
 Binding library for VGS Collect Android SDK
 
 ## Content
-* <b>VSGCollectBindingLibrary</b> - Android Binding Library
+* <b>VGSCollectBindingLibrary</b> - Android Binding Library
 * <b>AndroidSample</b> - Sample of the Xamarin Android project with VGS collect library integrated
 
 ## Dependencies
-### VSGCollectBindingLibrary
+### VGSCollectBindingLibrary
 * Xamarin.Kotlin.StdLib 1.3.50.1
 * Xamarin.AndroidX.AppCompat 1.1.0
 * Square.OkHttp3 4.2.2

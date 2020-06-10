@@ -89,9 +89,9 @@
         <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.3.50.1" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\VSGCollectBindingLibrary\VSGCollectBindingLibrary.csproj">
-        <Project>{F18C32A5-64D7-4FBF-9888-C75E7330785B}</Project>
-        <Name>VSGCollectBindingLibrary</Name>
+      <ProjectReference Include="..\VGSCollectBindingLibrary\VGSCollectBindingLibrary.csproj">
+        <Project>{f18c32a5-64d7-4fbf-9888-c75e7330785b}</Project>
+        <Name>VGSCollectBindingLibrary</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
