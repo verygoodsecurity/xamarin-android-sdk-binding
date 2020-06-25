@@ -27,6 +27,23 @@
    <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view']">
       <class abstract="true" name="InputFieldView" final="false" visibility="public" extends="android.widget.FrameLayout" />
    </add-node>
+
+   <attr path="/api/package[@name='com.verygoodsecurity.vgscollect.view']/class[@name='InputFieldView']/method[@name='setFieldName' 
+    and count(parameter)=1 
+    and parameter[1][@type='java.lang.String']]"
+         name="propertyName">FieldName</attr>
+   <attr path="/api/package[@name='com.verygoodsecurity.vgscollect.view']/class[@name='InputFieldView']/method[@name='getFieldName' 
+    and count(parameter)=0]"
+         name="propertyName">FieldName</attr>
+   
+   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view']/class[@name='InputFieldView']">
+      <method abstract="false" name="getFieldName" visibility="public" return="java.lang.String" native="false" static="false"/>
+   </add-node>
+   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view']/class[@name='InputFieldView']">
+      <method abstract="false" name="setFieldName" visibility="public" return="Void" native="false" static="false">
+         <parameter name="fieldName" type="java.lang.String"/>
+      </method>
+   </add-node>
    
    <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.widget']">
       <class abstract="false" name="ExpirationDateEditText" final="false" visibility="public" extends="com.verygoodsecurity.vgscollect.view.InputFieldView" />

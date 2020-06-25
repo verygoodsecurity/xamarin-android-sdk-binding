@@ -12,6 +12,9 @@ using Com.Verygoodsecurity.Vgscollect.Core.Storage;
 using Com.Verygoodsecurity.Vgscollect.Core.Model.State;
 using System.Text;
 using System.Collections.Generic;
+using Android.Content;
+using Com.Verygoodsecurity.Api.Cardio;
+using Java.Util;
 
 namespace AndroidSample
 {
@@ -19,6 +22,7 @@ namespace AndroidSample
     public class MainActivity : AppCompatActivity, IVgsCollectResponseListener, IOnClickListener,
         IOnFieldStateChangeListener
     {
+        private const int USER_SCAN_REQUEST_CODE = 0x7;
         private string TAG = "VGSCollect";
 
         private TextView stateView;
@@ -63,6 +67,9 @@ namespace AndroidSample
 
             Button submitBtn = this.FindViewById<Button>(Resource.Id.submitBtn);
             submitBtn.SetOnClickListener(this);
+
+            Button scanBtn = this.FindViewById<Button>(Resource.Id.scanBtn);
+            scanBtn.SetOnClickListener(this);
         }
 
         private void bindFields()
@@ -75,7 +82,25 @@ namespace AndroidSample
 
         public void OnClick(View v)
         {
-            submitData();
+            if (v.Id == Resource.Id.submitBtn)
+            {
+                submitData();
+            }
+            else if (v.Id == Resource.Id.scanBtn)
+            {
+                scanData();
+            }
+        }
+
+        private void scanData()
+        {
+            var scanSettingsMap = new HashMap();
+            scanSettingsMap.PutIfAbsent(cardNumber.FieldName, ScanActivity.CardNumber);
+
+            var intent = new Intent(this, typeof(ScanActivity));
+            intent.PutExtra(ScanActivity.ScanConfiguration, scanSettingsMap);
+
+            StartActivityForResult(intent, USER_SCAN_REQUEST_CODE);
         }
 
         private void submitData()
@@ -113,6 +138,14 @@ namespace AndroidSample
         public void OnStateChange(FieldState state)
         {
             printFieldsStates(state);
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            
+            // stateView.Text = data.Extras
+            collect.OnActivityResult(requestCode, (int) resultCode, data);
         }
 
         private void printFieldsStates(FieldState activeFieldState)
