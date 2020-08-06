@@ -55,7 +55,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\adapter-cardio-1.0.0.aar">
+    <LibraryProjectZip Include="Jars\adapter-cardio-1.0.1.aar">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </LibraryProjectZip>
   </ItemGroup>
