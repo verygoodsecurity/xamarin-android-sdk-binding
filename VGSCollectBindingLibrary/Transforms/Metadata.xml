@@ -61,10 +61,10 @@
       <class abstract="false" name="VGSCardNumberEditText" final="false" visibility="public" extends="com.verygoodsecurity.vgscollect.view.InputFieldView" />
    </add-node>
 
-   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core']/class[@name='VGSCollect']">
-      <method abstract="false" deprecated="not deprecated" final="false" name="bindView" native="false" return="void" static="false" synchronized="false" visibility="public">
-         <parameter name="p0" type="com.verygoodsecurity.vgscollect.view.InputFieldView" />
-      </method>
-   </add-node>
+<!--   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core']/class[@name='VGSCollect']">-->
+<!--      <method abstract="false" deprecated="not deprecated" final="false" name="bindView" native="false" return="void" static="false" synchronized="false" visibility="public">-->
+<!--         <parameter name="p0" type="com.verygoodsecurity.vgscollect.view.InputFieldView" />-->
+<!--      </method>-->
+<!--   </add-node>-->
  
 </metadata>
