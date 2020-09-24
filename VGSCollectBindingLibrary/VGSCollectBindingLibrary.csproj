@@ -67,7 +67,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\vgscollect-1.1.10.aar">
+    <LibraryProjectZip Include="Jars\vgscollect-1.2.4.aar">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </LibraryProjectZip>
   </ItemGroup>
