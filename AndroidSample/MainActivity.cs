@@ -96,6 +96,9 @@ namespace AndroidSample
         {
             var scanSettingsMap = new HashMap();
             scanSettingsMap.PutIfAbsent(cardNumber.FieldName, ScanActivity.CardNumber);
+            scanSettingsMap.PutIfAbsent(expDate.FieldName, ScanActivity.CardExpDate);
+            scanSettingsMap.PutIfAbsent(personName.FieldName, ScanActivity.CardHolder);
+            scanSettingsMap.PutIfAbsent(cvcField.FieldName, ScanActivity.CardCvc);
 
             var intent = new Intent(this, typeof(ScanActivity));
             intent.PutExtra(ScanActivity.ScanConfiguration, scanSettingsMap);
