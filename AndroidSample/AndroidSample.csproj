@@ -55,9 +55,12 @@
         <Reference Include="Mono.Android" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="MainActivity.cs" />
+        <Compile Include="ActivityCase\VGSCollectActivity.cs" />
+        <Compile Include="StartActivity.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="FragmentCase\VGSCollectFragmentActivity.cs" />
+        <Compile Include="ViewPagerCase\VGSViewPagerActivity.cs" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Resources\AboutResources.txt" />
@@ -65,19 +68,129 @@
         <None Include="Assets\AboutAssets.txt" />
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="Resources\layout\activity_main.axml">
-            <SubType>Designer</SubType>
-        </AndroidResource>
         <AndroidResource Include="Resources\values\colors.xml" />
         <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
         <AndroidResource Include="Resources\values\strings.xml" />
         <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\dimens.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\bg_card_preview.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\bg_shape_rappi_field.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\bg_submit_button.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_arrow_left.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_arrow_right.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_attach_file.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_cards.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_custom_visa.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_launcher_background.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\drawable\ic_scan_card.xml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\activity_collect_demo.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\activity_fragment_collect_demo.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\activity_main.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\activity_start.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\activity_viewpager_collect_demo.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\card_date_cvc_page.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\card_holder_page.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\card_number_page.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\fields_gravity.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\fragment_details.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\fragment_payment.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\input_field_paddings_layout.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\input_layout_card_num_test.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\text_input_layout_modes.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\textinputlayout_apperance.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\layout\ui_components_size.axml">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
+        <AndroidResource Include="Resources\font\robotomono_light.ttf">
+          <SubType></SubType>
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
         <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0" />
         <PackageReference Include="Xamarin.AndroidX.AppCompat.AppCompatResources" Version="1.2.0" />
         <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources" Version="1.1.0" />
+        <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="1.1.3" />
         <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI" Version="1.0.0" />
         <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.2.0" />
         <PackageReference Include="Xamarin.CardIO.Android" Version="5.5.1" />
@@ -100,6 +213,12 @@
         <Project>{e858819b-c486-42de-b215-96cfc419ce26}</Project>
         <Name>VGSCollectCardioBindingLibrary</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Resources\drawable\" />
+      <Folder Include="Resources\font\" />
+      <Folder Include="FragmentCase\" />
+      <Folder Include="ViewPagerCase\" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
