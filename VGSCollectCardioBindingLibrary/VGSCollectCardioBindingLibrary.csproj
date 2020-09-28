@@ -14,7 +14,7 @@
     <AssemblyName>VGSCollectCardioBindingLibrary</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Card.IO.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\.nuget\packages\xamarin.cardio.android\5.5.1\lib\MonoAndroid403\Card.IO.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,7 +49,6 @@
     <Compile Include="ScanActivity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -55,20 +57,22 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\adapter-cardio-1.0.0.aar">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </LibraryProjectZip>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\VGSCollectBindingLibrary\VGSCollectBindingLibrary.csproj">
       <Project>{f18c32a5-64d7-4fbf-9888-c75e7330785b}</Project>
       <Name>VGSCollectBindingLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.3.50.1" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.3.50.1" />
+    <PackageReference Include="Karamunting.AndroidX.Core.CoreKtX" Version="1.3.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0" />
+    <PackageReference Include="Xamarin.CardIO.Android" Version="5.5.1" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.3.72" />
+    <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.3.72" />
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\adapter-cardio-1.0.0.aar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </LibraryProjectZip>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

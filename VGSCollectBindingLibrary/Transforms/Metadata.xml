@@ -13,16 +13,15 @@
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.material.internal']" />
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core.model']"/>
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.date.validation']"/>
+   <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.card.formatter.date']/class['BaseDateFormatter']"/>
     
    <!-- Hiding internal classes with inner classes -->
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.app']/class[starts-with(@name, 'FilePickerActivity')]" />
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.date']/class[starts-with(@name, 'DatePickerBuilder')]"/>
-    
-   <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core.model']/class[starts-with(@name, 'VGSHashMapWrapper')]"/>
+   
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core.storage']/class[starts-with(@name, 'Notifier')]"/>
    
    <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core.storage.content.file']/class[starts-with(@name, 'TemporaryFileStorage')]"/>
-   <remove-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.card']/class[starts-with(@name, 'InputCardNumberConnection')]"/>
    
    <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view']">
       <class abstract="true" name="InputFieldView" final="false" visibility="public" extends="android.widget.FrameLayout" />
@@ -61,10 +60,11 @@
       <class abstract="false" name="VGSCardNumberEditText" final="false" visibility="public" extends="com.verygoodsecurity.vgscollect.view.InputFieldView" />
    </add-node>
 
-<!--   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.core']/class[@name='VGSCollect']">-->
-<!--      <method abstract="false" deprecated="not deprecated" final="false" name="bindView" native="false" return="void" static="false" synchronized="false" visibility="public">-->
-<!--         <parameter name="p0" type="com.verygoodsecurity.vgscollect.view.InputFieldView" />-->
-<!--      </method>-->
-<!--   </add-node>-->
+   <add-node path="/api/package[@name='com.verygoodsecurity.vgscollect.view.card.formatter']/class[@name='CardNumberFormatter']">
+      <method abstract="false" deprecated="not deprecated" final="true" name="setMask"  bridge="false" native="false" return="void" static="false" synchronized="false" synthetic="false" visibility="public">
+         <parameter name="mask" type="java.lang.String" not-null="true"/>
+      </method>
+      <method abstract="false" name="getMask" visibility="public" return="java.lang.String" native="false" static="false"/>
+   </add-node>
  
 </metadata>
