@@ -14,12 +14,18 @@
 // // </copyright>
 // //-----------------------------------------------------------------------
 #endregion
+
+using Card.IO;
+
 namespace Com.Verygoodsecurity.Api.Cardio
 {
     public partial class ScanActivity
     {
         public const string ScanConfiguration = "vgs_scan_settings";
-
+        public const string ExtraGuideColor = CardIOActivity.ExtraGuideColor;
+        public const string ExtraLanguageOrLocale = CardIOActivity.ExtraLanguageOrLocale;
+        public const string ExtraScanInstructions = CardIOActivity.ExtraScanInstructions;
+    
         public const int CardNumber = 0x71;
         public const int CardCvc = 0x72;
         public const int CardHolder = 0x73;
