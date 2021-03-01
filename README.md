@@ -3,6 +3,10 @@
 # VGS Xamarin Android Binding library
 Binding library for VGS Collect Android SDK
 
+
+> **_NOTE:_**  VGS does not support Xamarin. This demo is just an example of how VGS Collect SDK can be integrated into your application.
+
+
 ## Content
 * <b>VGSCollectBindingLibrary</b> - Android Binding Library
 * <b>AndroidSample</b> - Sample of the Xamarin Android project with VGS collect library integrated
